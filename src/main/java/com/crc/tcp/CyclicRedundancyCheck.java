@@ -1,6 +1,5 @@
 package com.crc.tcp;
 
-
 public class CyclicRedundancyCheck {
 
     private static String substringData(String data, int init, int size){
@@ -11,7 +10,7 @@ public class CyclicRedundancyCheck {
 
         String data = String.join("", message).concat("00000000"); //concatenando 8 zeros porque o grau do gerador é 8
 
-        //CRC-8 (Polinomio para CRC de 8 bits = x^8 + X^2 + X^1 + 1, gerador = 100000111
+        //CRC-8 (Polinomio para CRC de 8 bits = x^8 + x^2 + x^1 + 1, gerador = 100000111
         int polynomial = 8;
         String generator = "100000111";
 

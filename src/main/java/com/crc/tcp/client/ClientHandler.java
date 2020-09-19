@@ -25,7 +25,13 @@ public class ClientHandler implements Runnable {
     public void run() {
         try {
             while(true){
-                out.println(Convert.binaryToHex(CyclicRedundancyCheck.calculate(Convert.stringToBinary(in.readLine()))));
+                out.println(
+                        Convert.binaryToHex(
+                                CyclicRedundancyCheck.calculate(
+                                        Convert.stringToBinary(in.readLine())
+                                )
+                        )
+                );
             }
         } catch (IOException e) {
             System.err.println("IO exception in client handler");
